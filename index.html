@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Gingy Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gingy Fashion</h1>
+    </header>
+
+  
+    <nav>
+        <a href="about.html">About Me</a>
+        <a href="#what-to-wear">What to Wear With</a>
+        <a href="#traditional-wear">Traditional Wear</a>
+        <a href="#x-shirt">X Shirt at Different Locations</a>
+        <a href="#rabbit">Rabbit</a>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Welcome to Gingy Fashion</h1>
+                <p>Sign up to stay updated with our latest fashion trends and news!</p>
+                <form id="emailForm">
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p id="confirmationMessage" style="display:none; margin-top:1rem; color:#001f3f;">Thank you for signing up!</p>
+            </div>
+            <div class="hero-image">
+                <img src="WhatsApp Image 2024-07-03 at 12.20.47 PM.jpeg" alt="Hero Image">
+            </div>
+        </div>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+
+    <div class="container">
+        <a href="about.html" class="link">
+        <section id="about" class="section fade-in">
+           
+            <h2>About Me</h2>
+            <p>I create outfit inspo with price comparisons and vintage traditional wear history.</p>
+        </section>
+    </a>
+
+        <section id="what-to-wear" class="section fade-in">
+            <h2>What to Wear With</h2>
+            <p>Details about different outfit combinations and suggestions.</p>
+        </section>
+
+        <section id="traditional-wear" class="section fade-in">
+            <h2>Traditional Wear</h2>
+            <input type="text" id="searchBar" placeholder="Search for a country..." onkeyup="filterCountries()">
+            <div id="countryList">
+                <div class="country-card" data-country="saudi-arabia">
+                    <h3>Saudi Arabia</h3>
+                    <p>Traditional wear of Saudi Arabia</p>
+                    <img src="images/flags/saudiarabia.png" alt="Saudi Arabia Traditional Wear">
+                </div>
+                <div class="country-card" data-country="spain">
+                    <h3>Spain</h3>
+                    <p>Traditional wear of Spain</p>
+                    <img src="images/flags/spain.jpeg" alt="Spain Traditional Wear">
+                </div>
+                <div class="country-card" data-country="morocco">
+                    <h3>Morocco</h3>
+                    <p>Traditional wear of Morocco</p>
+                    <img src="images/flags/morocco.jpeg" alt="Morocco Traditional Wear">
+                </div>
+            </section>
+            <section id="x-shirt" class="section fade-in">
+                <h2>X Shirt at Different Locations</h2>
+                <p>Showcasing how the X shirt can be styled in various locations.</p>
+            </section>
+        
+            <section id="rabbit" class="section fade-in">
+                <h2>My Rabbit</h2>
+                <div class="carousel">
+                    <img src="WhatsApp Image 2024-07-03 at 12.20.47 PM.jpeg">
+                    <img src="WhatsApp Image 2024-07-03 at 12.21.04 PM.jpeg">
+                    <img src="WhatsApp Image 2024-07-03 at 12.21.16 PM.jpeg">
+                    <img src="WhatsApp Image 2024-07-03 at 1.29.46 PM.jpeg">
+            </div>
+        </section>
+    </div>
+
+    <footer id="footer">
+        <p>&copy; 2024 Gingy Fashion. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
