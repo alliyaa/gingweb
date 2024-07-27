@@ -113,6 +113,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
         addCardListeners();
     }
+
+    document.querySelectorAll('.category-button').forEach(button => {
+        button.addEventListener('click', () => {
+            alert(`You clicked on ${button.textContent}`);
+        });
+    });
+
+    document.querySelector('.new-category-button').addEventListener('click', () => {
+        alert('You clicked on new category');
+    });
 });
 
 

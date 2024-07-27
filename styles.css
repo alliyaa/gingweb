@@ -14,8 +14,8 @@ header {
     text-align: center;
     font-family: 'Lobster', cursive;
 }
-nav {
-    background-color: #3D0075;
+nav{
+    background-color: #391958;
     padding: 0.5rem;
     text-align: center;
     position: sticky;
@@ -311,4 +311,35 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+}
+
+
+/* closet page styling */
+.closetf {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.closet-item {
+    flex: 1 1 calc(33.333% - 40px);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 2rem; /* Set a minimum height to ensure uniformity */
+    justify-content: center; /* Ensure text is centered vertically */
+}
+
+.closet-item p {
+    max-width: 18rem;
+    margin: 0;
+}
+
+.closetimg {
+    margin-top: 1rem;
+    max-width: 35rem;
+    max-height: 40rem;
 }
