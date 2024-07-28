@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Gingy Fashion</title>
+    <title>Your Digital Closet</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>The Gingy App</h1>
+        <div class="nav-container">
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <nav>
+                <a href="about.html"> About The Gingy App</a>
+                <a href="closet.html">Closet Feature </a>
+                <a href="events.html">Events Feature </a>
+                <a href="home.html">Creater Posts Feature </a>
+                <a href="shop.html">Shop Feature </a>
+                <a href="#rabbit">Gingy</a>
+            
+            </nav>
+        </div>
     </header>
-
-  
-  
-    <nav>
-        <a href="about.html"> About The Gingy App</a>
-        <a href="closet.html">Closet Feature </a>
-        <a href="events.html">Events Feature </a>
-        <a href="home.html">Creater Posts Feature </a>
-        <a href="shop.html">Shop Feature </a>
-        <a href="#rabbit">Gingy</a>
-    
-    </nav>
 
     <div class="hero">
         <div class="hero-content">
@@ -31,7 +32,7 @@
                 <p>Join The Waitlist!</p>
                 <form id="emailForm">
                     <input type="email" id="email" placeholder="Enter your email" required>
-                    <button type="submit"> Join </button>
+                    <button type="submit">Sign Up</button>
                 </form>
                 <p id="confirmationMessage" style="display:none; margin-top:1rem; color:#001f3f;">Thank you for signing up!</p>
             </div>
@@ -40,36 +41,7 @@
             </div>
         </div>
     </div>
-
-
-    <div class="container">
-        <a href="about.html" class="link">
-        <section id="about" class="section fade-in">
-           
-            <h2>About The Gingy App</h2>
-            <p> More Details about the startup's features and initial wireframes can be found here.</p>
-        </section>
-    </a>
-    <section id="rabbit" class="section fade-in">
-        <h2>My Rabbit</h2>
-        <p> The App is named The Gingy App, after my rabbit Gingy</p>
-        <div class="carousel">
-            <img src="WhatsApp Image 2024-07-03 at 12.20.47 PM.jpeg">
-            <img src="WhatsApp Image 2024-07-03 at 12.21.04 PM.jpeg">
-            <img src="WhatsApp Image 2024-07-03 at 12.21.16 PM.jpeg">
-            <img src="WhatsApp Image 2024-07-03 at 1.29.46 PM.jpeg">
-            <img src="WhatsApp Image 2024-07-03 at 12.20.47 PM.jpeg">
-            <img src="WhatsApp Image 2024-07-03 at 12.21.04 PM.jpeg">
-            <img src="WhatsApp Image 2024-07-03 at 12.21.16 PM.jpeg">
-            <img src="WhatsApp Image 2024-07-03 at 1.29.46 PM.jpeg">
-    </div>
-</section>
-
-</div>
-
-    <footer id="footer">
-        <p> 2024 Gingy Fashion. All rights reserved.</p>
-    </footer>
+    <!-- Other content here -->
 
     <script src="script.js"></script>
 </body>
