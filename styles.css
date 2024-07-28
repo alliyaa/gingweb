@@ -298,6 +298,7 @@ footer {
     background-color: #001f3f;
     color: #fff;
     text-align: center;
+    display: block;
     padding: 1rem 0;
 }
 
@@ -347,4 +348,63 @@ footer {
     right: 1rem;
     font-size: 1rem;
     font-weight: bold;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        height: auto;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .hero button {
+        width: 100%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel img {
+        width: 100%;
+    }
+
+    .closet-item {
+        flex: 1 1 100%;
+    }
+    
+    .theme-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
 }
