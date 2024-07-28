@@ -8,7 +8,7 @@
 
 html {
     font-size: 62.5%;
-   
+    font-family: 'Roboto', sans-serif;
 }
 
 li {
@@ -19,21 +19,16 @@ a {
     text-decoration: none;
 }
 
-
-body {
-   
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    overflow-x: hidden;
-   
-}
-
 .header{
     border-bottom: 1px solid #E2E8F0;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
 
 .hamburger {
     display: none;
@@ -49,7 +44,6 @@ body {
     background-color: #101010;
 }
 
-
 .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -57,23 +51,23 @@ body {
 }
 
 .nav-item {
-    margin-left: 2rem;
+    margin-left: 5rem;
 }
 
 .nav-link{
     font-size: 1.6rem;
     font-weight: 400;
-    color: #475569;
+    color: #0e2544;
 }
 
 .nav-link:hover{
-    color: #4e0945;
+    color: #4b0a33;
 }
 
 .nav-logo {
     font-size: 2.1rem;
     font-weight: 500;
-    color: #c8c1f6;
+    color: #4b0a33;
 }
 
 
