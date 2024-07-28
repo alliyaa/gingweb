@@ -124,3 +124,59 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('You clicked on new category');
     });
 });
+
+
+const canvas = document.getElementById('heroCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let curves = [];
+
+function createCurves() {
+    for (let i = 0; i < 20; i++) {
+        curves.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            speedX: (Math.random() - 0.5) * 2,
+            speedY: (Math.random() - 0.5) * 2,
+            radius: Math.random() * 50
+        });
+    }
+}
+
+function drawCurves() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 2;
+    
+    curves.forEach(curve => {
+        ctx.beginPath();
+        ctx.moveTo(curve.x, curve.y);
+        ctx.quadraticCurveTo(
+            curve.x + curve.speedX * 50,
+            curve.y + curve.speedY * 50,
+            curve.x + curve.speedX * 100,
+            curve.y + curve.speedY * 100
+        );
+        ctx.stroke();
+        curve.x += curve.speedX;
+        curve.y += curve.speedY;
+
+        if (curve.x < 0 || curve.x > canvas.width) curve.speedX *= -1;
+        if (curve.y < 0 || curve.y > canvas.height) curve.speedY *= -1;
+    });
+}
+
+function animate() {
+    drawCurves();
+    requestAnimationFrame(animate);
+}
+
+createCurves();
+animate();
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
