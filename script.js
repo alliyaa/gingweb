@@ -1,18 +1,22 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
+const menu_items = document.querySelectorAll('nav .mainMenu li a');
 
-hamburger.addEventListener("click", mobileMenu);
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
 
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+// close menu when you click on a menu item 
+menu_items.forEach(item => {
+    item.addEventListener('click',function(){
+        close();
+    })
+})
+
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
 }
-
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
+function close(){
+    mainMenu.style.top = '-100%';
 }
