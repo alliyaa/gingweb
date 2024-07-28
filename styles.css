@@ -454,6 +454,50 @@ footer {
     .closet-item {
         flex: 1 1 100%;
     }
+
+    .phone {
+        background: white;
+        padding: 1.5em;
+        border-radius: 2em;
+        position: relative;
+        transform: rotateZ(-45deg);
+        box-shadow: -30px 30px 0px rgba(0,0,0,.1);
+        width: 50%; /* Adjusted width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .phone::before {
+        content: " ";
+        position: absolute;
+        background-color: #001f3f;
+        border-radius: 1em;
+        padding: .5em;
+        width: 33%;
+        top: -5px;
+        left: 30%;
+    }
+
+    .hero input[type="email"] {
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        border: none;
+        border-radius: 4px;
+        width: 250px;
+        height: 40px; /* Ensure the height matches the button */
+    }
+    
+    .hero button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background-color: #001f3f;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        height: 40px; /* Set the height to match the input */
+    }
 }
 
 /* Additional adjustments for very small screens */
