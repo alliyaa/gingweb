@@ -427,10 +427,7 @@ footer {
     .hero p {
         font-size: 1rem;
     }
-    .hero input[type="email"] {
-        width: 100%;
-        margin: 0.5rem 0;
-    }
+  
     .hero button {
         width: 100%;
         margin-top: 0.5rem;
@@ -454,6 +451,13 @@ footer {
     .closet-item {
         flex: 1 1 100%;
     }
+
+    
+    .hero input[type="email"] {
+        width: 60vw; 
+        margin: 0.5rem 0;
+    }
+    
 
     
     .hero button {
