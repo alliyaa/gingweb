@@ -120,7 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('nav');
 
     hamburger.addEventListener('click', () => {
-        nav.classList.toggle('show');
+       nav.classList.toggle('show');
+       toggleMenu();
     });
 });
 
@@ -128,6 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function toggleMenu() {
     const nav = document.querySelector('nav');
     nav.classList.toggle('show');
+    
 }
 
-toggleMenu()
