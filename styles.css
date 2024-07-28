@@ -386,7 +386,6 @@ footer {
     max-height: 40rem;
 }
 
-
 @media only screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -415,6 +414,7 @@ footer {
         cursor: pointer;
     }
 
+    
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }

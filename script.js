@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -125,7 +124,6 @@ function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 }
-
 
 const navLink = document.querySelectorAll(".nav-link");
 
