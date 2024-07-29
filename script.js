@@ -17,6 +17,8 @@ function showImage(index) {
     });
 }
 
+
+
 function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
         showImage(currentIndex + 1);
@@ -27,18 +29,9 @@ function stopAutoSlide() {
     clearInterval(autoSlideInterval);
 }
 
+document.querySelector('.carousel').addEventListener('mouseover', stopAutoSlide);
+document.querySelector('.carousel').addEventListener('mouseout', startAutoSlide);
 
-
-startAutoSlide();
-stopAutoSlide();
-
-const emailForm = document.getElementById('emailForm');
-emailForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    document.getElementById('confirmationMessage').style.display = 'block';
-    emailForm.reset();
-});
 
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('.section');
@@ -64,36 +57,6 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    document.querySelector('nav a[href="about.html"]').addEventListener('click', (e) => {
-        e.preventDefault();
-        window.location.href = 'about.html';
-    });
-
-  
-    function addCardListeners() {
-        const countryCards = document.querySelectorAll('.country-card');
-        countryCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const country = card.getAttribute('data-country').toLowerCase();
-                window.location.href = `${country}.html`;
-            });
-        });
-    }
-
-    addCardListeners();
-
-
-    document.querySelectorAll('.category-button').forEach(button => {
-        button.addEventListener('click', () => {
-            alert(`You clicked on ${button.textContent}`);
-        });
-    });
-
-    document.querySelector('.new-category-button').addEventListener('click', () => {
-        alert('You clicked on new category');
-    });
-
-
     const emailForm = document.getElementById('emailForm');
     emailForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -117,5 +80,25 @@ document.addEventListener('DOMContentLoaded', () => {
         
         emailForm.reset();
     });
+  
+
+    document.querySelector('nav a[href="about.html"]').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'about.html';
+    });
+
+
+    document.querySelectorAll('.category-button').forEach(button => {
+        button.addEventListener('click', () => {
+            alert(`You clicked on ${button.textContent}`);
+        });
+    });
+
+    document.querySelector('.new-category-button').addEventListener('click', () => {
+        alert('You clicked on new category');
+    });
 });
+
+
+
 

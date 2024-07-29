@@ -1,9 +1,13 @@
+/* eslint-disable */
+
 require('dotenv').config({ path: 'f.env' });
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const process = require('process');
 const path = require('path');
+
+/* eslint-enable */
 
 const app = express();
 const PORT = process.env.PORT || 3000;
