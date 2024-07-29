@@ -57,33 +57,7 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const emailForm = document.getElementById('emailForm');
-    emailForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
 
-        fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                access_key: 'fe3b8991-a511-46ac-8b5b-275eec7d5773',
-                email: email
-            })
-        })
-        .then(response => {
-            if (response.ok) {
-                document.getElementById('confirmationMessage').style.display = 'block';
-            } else {
-                alert('Error: ' + response.statusText);
-            }
-        })
-        .catch(error => console.error('Error:', error));
-        
-        emailForm.reset();
-    });
-  
 
     document.querySelector('nav a[href="about.html"]').addEventListener('click', (e) => {
         e.preventDefault();
@@ -102,3 +76,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = json.message;
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});

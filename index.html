@@ -24,14 +24,21 @@
             <div class="hero-text">
                 <h1 class="heading"> Revolutionizing the way we shop, find our style, create, and share fashion inspiration </h1>
                 <p>Join The Waitlist To Be Notified When The App Is On The App Store / Play Store!</p>
-                <form action="https://formsubmit.co/b4c3917f2da28a37205a8a3d11f3505b" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="New person for gingy app waitlist!">
-                    <input type="hidden" name="_next" value="https://thegingyapp.pages.dev/thanks.html">
-                    <input type="email" name="email" placeholder="Your Email Address" required>
+                <form method="POST" id="form">
+
+                    <input type="hidden" name="access_key" value="fe3b8991-a511-46ac-8b5b-275eec7d5773">
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                    <input type="checkbox" name="botcheck" id="" style="display: none;">
+                
+                    <!-- Custom Form Data -->
+                    <input type="email" name="email" required>
+                    <input type="text" name="name" required>
+                
                     <button type="submit"> Join </button>
-               </form>
+                
+                    <div id="result"></div>
+                
+                </form>  
             </div>
                   
     <div class="xyz-in" xyz="down duration-10 ease-in-out-back">
