@@ -62,12 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const email = document.getElementById('email').value;
 
-        fetch('/api/subscribe', {
+        fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ email: email })
+            body: JSON.stringify({
+                access_key: 'fe3b8991-a511-46ac-8b5b-275eec7d5773',
+                email: email
+            })
         })
         .then(response => {
             if (response.ok) {
