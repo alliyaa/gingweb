@@ -64,7 +64,6 @@ nav li:first-child
 }
 
 
-
 .sidebar li
 {
     width:100%;
@@ -77,6 +76,10 @@ nav li:first-child
     color: #ffff;
     padding:0 30px;
 }
+  .menu-button
+{
+    display:none;
+} 
 
 
 
