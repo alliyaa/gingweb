@@ -1,37 +1,90 @@
 body {
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffff;
+    min-height: 100vh;
     color: #333;
     overflow-x: hidden;
    
 }
-header {
-    background-color:#f4f4f4;
-    color:#001f3f;
-    padding: 1.5rem 0;
-    text-align: center;
-    font-family: 'Lobster', cursive;
-}
+
 nav{
-    background-color: #001f3f;
-    padding: 0.5rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #ffff;
+  
 }
-nav a {
-    color: #fff;
-    margin: 0 1rem;
+
+nav ul
+{
+    width:100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li
+{
+    height:50px;
+}
+
+nav a{
+    height:100%;
+    padding: 0 70px;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    display:flex;
+    align-items: center;
+    color: #001f3f;
 }
+
+
+nav li:first-child
+{
+    margin-right: auto;
+    
+}
+
+
+.sidebar
+{
+    position:fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:250px;
+    z-index: 999;
+    background-color:#001f3f;
+    color:#fff;
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+
+.sidebar li
+{
+    width:100%;
+    color:#fff;
+}
+
+
+.sidebar a{
+    width:100%;
+    color:#fff;
+}
+
+ .menu-button
+{
+    display:none;
+} 
+
+
 nav a:hover {
     color:#640735;
-}
+} 
 .hero {
     display: flex;
     background-color: #640735;
@@ -65,7 +118,7 @@ nav a:hover {
     position: relative;
     overflow: hidden;
     height: 60vh;
-    background-color: #7a0941;
+    background-color:#640735;
     color: #fff;
     display: flex;
     align-items: center;
@@ -99,15 +152,41 @@ nav a:hover {
     width: 250px;
 }
 
-.hero input[type="name"] {
+.boxseen
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.textarea {
     padding: 0.5rem;
     font-size: 1rem;
     margin-right: 0.5rem;
     border: none;
     border-radius: 4px;
-    width: 250px;
+    width: 250px; 
+    justify-content: center;
+ 
+    
 }
 
+.footerbtn
+{   padding: 0.5rem 1rem;
+    font-size: 1rem;
+    max-width: 10rem;
+    background-color:#640735;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+}
 
 
 .hero button {
@@ -199,7 +278,7 @@ footer {
     display: none;
     margin: 1rem 0;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     border-radius: 8px;
 }
 .country-card img {
@@ -214,7 +293,7 @@ footer {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     border-radius: 4px;
     font-size: 1rem;
 }
@@ -230,7 +309,7 @@ footer {
     display: block;
     text-decoration: none;
     color: inherit;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 1.5rem;
     margin: 1rem 0;
     border-radius: 8px;
@@ -239,7 +318,7 @@ footer {
 }
 .about-card:hover {
     transform: scale(1.02);
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
 .card-content h3 {
     font-family: 'Lobster', cursive;
@@ -316,7 +395,7 @@ footer {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-   background-color: #f4f4f4;
+   background-color: #fff;
 }
 
 .closet-item {
@@ -409,18 +488,9 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    nav a {
-        display: inline-block; /* Change this line */
-        margin: 0.5rem;
-    }
+    
     .hero {
         flex-direction: column;
         height: auto;
@@ -510,5 +580,26 @@ footer {
     }
     .hero button {
         font-size: 0.9rem;
+    }
+}
+
+
+@media(max-width:800px)
+{
+    .hideOnMobile
+    {
+        display:none;
+    }
+
+    .menu-button
+{
+    display:block;
+}
+}
+
+@media(max-width:400px)
+{
+    .sidebar{
+        width:100%;
     }
 }

@@ -8,11 +8,27 @@
 </head>
 <body>
 
+
+    
     <nav>
-        <a href="index.html">Home</a>
-        <a href="closet.html">Closet</a>
-        <a href="home.html">Creater</a>
-        <a href="shop.html">Shop</a>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()> <a href=""> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> </a></li>
+            <li> <a href=""> Gingy </a></li>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="closet.html">Closet</a> </li>
+            <li> <a href="home.html">Creater</a></li>
+            <li> <a href="shop.html">Shop</a></li>
+            <li > <a href="#footer"> Contact</a></li>
+        </ul>
+        <ul>
+            <li> <a href=""> Gingy </a></li>
+            <li  class="hideOnMobile"> <a href="index.html">Home</a></li>
+            <li class="hideOnMobile"> <a href="closet.html">Closet</a> </li>
+            <li class="hideOnMobile"> <a href="home.html">Creater</a></li>
+            <li class="hideOnMobile"> <a href="shop.html">Shop</a></li>
+            <li class="hideOnMobile"> <a href="#footer"> Contact</a></li>   
+            <li class="menu-button" onclick=showSidebar()> <a href=""> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#004270"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg> </a></li>
+        </ul>
     </nav>
     <div class="closetf"> 
         <div class="closet-item">
@@ -39,7 +55,7 @@
     </div>
 
     <footer id="footer">
-        <p> 2024 Gingy Fashion. All rights reserved.</p>
+        <p>&copy; 2024 The Gingy App. All rights reserved.</p>
     </footer>
     
     <script src="script.js"></script>
